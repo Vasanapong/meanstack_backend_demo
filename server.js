@@ -27,5 +27,5 @@ mongoose.connect(process.env.MONGO_LINK,{dbName:'portfolio_database'})
         .then(()=>console.log('Connected to database successfully!'))
         .catch((error)=>console.log(error))
 
-const port = process.env.PORT
+const port = process.env.PORT || 3456
 app.listen(port,()=>console.log(`App is running on port ${port}...`))
